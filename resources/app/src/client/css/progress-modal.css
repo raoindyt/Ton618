@@ -1,0 +1,25 @@
+/* Progress Modal */
+.progress-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.3s ease}
+.progress-modal.show{opacity:1;visibility:visible}
+.progress-modal-content{background:linear-gradient(180deg,rgba(26,26,34,.95),rgba(20,20,27,.9));border:1px solid rgba(93,86,128,.4);border-radius:16px;padding:24px;min-width:320px;max-width:600px;width:min(92vw,600px);box-shadow:0 20px 60px rgba(0,0,0,.5);transform:scale(.9);transition:.25s ease}
+.progress-modal.show .progress-modal-content{transform:scale(1)}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.progress-header h3{margin:0;font-size:18px;font-weight:600;color:#efe8ff}
+.close-btn{background:none;border:none;color:#999;font-size:24px;cursor:pointer;padding:4px;line-height:1;transition:.2s ease}
+.close-btn:hover{color:#efe8ff}
+.progress-info{margin-bottom:16px}
+.progress-title{font-size:16px;font-weight:600;color:#efe8ff;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.progress-status{font-size:13px;color:#b5b5b5}
+.progress-bar-container{margin-bottom:12px}
+.progress-bar{position:relative;height:8px;background:#1a1a1f;border-radius:4px;height:8px;overflow:hidden;margin:8px 0;position:relative}
+.progress-fill{background:linear-gradient(90deg,#6d56ff,#b58aff);height:100%;width:0%;border-radius:4px;transition:width 0.3s ease-out,background 0.2s ease;position:relative}
+.progress-fill::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);animation:progress-shimmer 2s infinite linear}
+.progress-fill.initializing{background:linear-gradient(90deg,#6d56ff,#b58aff)}
+.progress-fill.downloading{background:linear-gradient(90deg,#4CAF50,#81C784)}
+.progress-fill.converting{background:linear-gradient(90deg,#FF9800,#FFB74D)}
+.progress-fill.finalizing{background:linear-gradient(90deg,#2196F3,#64B5F6)}
+.progress-fill.completed{background:linear-gradient(90deg,#4CAF50,#66BB6A)}
+.progress-fill.error{background:linear-gradient(90deg,#F44336,#EF5350);animation:none}
+@keyframes progress-shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}} 
+.progress-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;font-weight:600;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.progress-details{font-size:12px;color:#888;min-height:16px}

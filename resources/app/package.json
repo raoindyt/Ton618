@@ -1,0 +1,19 @@
+{
+  "name": "ton618-music-player",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Desktop music player with yt-dlp search/download, covers and modular architecture",
+  "main": "src/electron/main.js",
+  "type": "module",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "node-id3": "^0.2.6",
+    "open": "^10.1.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.18.0"
+  }
+}
